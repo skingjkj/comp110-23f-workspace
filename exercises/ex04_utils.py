@@ -1,14 +1,16 @@
-"""`Ex04: list` Utility Functions"""
+"""`Ex04: list` Utility Functions!"""
 __author__ = "730665331"
 
 
 def main() -> None:
-    print(is_equal([1, 1, 21], [1, 1, 21]))
+    """To test the functions."""
+    print(max([99, 5555, 99999]))
 
 # First function: given a list of ints and an int, return a bool indicating whether all the ints in the list are the same as given int.
 
 
 def all(int_list: list[int], number: int) -> bool:
+    """Given a list of ints and an int, all should return a bool indicating whether or not all the ints in the list are the same as the given int."""
     # Declaring the variable that's going to be used.
     i = 0
     # Condition to return false if the list is empty.
@@ -26,9 +28,10 @@ def all(int_list: list[int], number: int) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """The max function is given a list of ints, max should return the largest in the List. If the list is empty, max should result in a ValueError."""
     # Declaring the variable that's going to be used.
     i = 0
-    biggest_int = 0
+    biggest_int = input[i]
     # Condition to return false if the list is empty.
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
@@ -46,10 +49,13 @@ def max(input: list[int]) -> int:
 
 
 def is_equal(first_list: list[int], second_list: list[int]) -> bool:
+    """Given two lists of int values, return True if every element at every index is equal in both lists."""
     # Declaring the variable that's going to be used.
     i = 0
     q = 0
     # Make sure the length are equal
+    if len((first_list)) == 0 and len((second_list)) == 0:
+        return False
     if len((first_list)) != len((second_list)):
         return False
     # Loop to make sure that the two lists are indentical to each other, if not, return false.
