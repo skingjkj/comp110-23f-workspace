@@ -1,4 +1,7 @@
+"""Running the simulation."""
+
 __author__ = "730665331"
+
 
 from exercises.ex08.river import River
 
